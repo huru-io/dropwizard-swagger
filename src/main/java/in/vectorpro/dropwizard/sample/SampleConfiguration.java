@@ -17,13 +17,14 @@ package in.vectorpro.dropwizard.sample;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import in.vectorpro.dropwizard.swagger.SwaggerBundleConfiguration;
-import io.dropwizard.Configuration;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import io.dropwizard.core.Configuration;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 public class SampleConfiguration extends Configuration {
 
-  @Valid @NotNull
+  @Valid
+  @NotNull
   private final SwaggerBundleConfiguration swagger = new SwaggerBundleConfiguration();
 
   @JsonProperty("swagger")

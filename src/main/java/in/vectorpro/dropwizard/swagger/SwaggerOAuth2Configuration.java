@@ -17,75 +17,77 @@ package in.vectorpro.dropwizard.swagger;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.common.collect.Maps;
-import java.util.Map;
-import javax.annotation.Nullable;
 
-/** For the meaning of all these properties please refer to Swagger UI documentation */
+import java.util.Map;
+
+/**
+ * For the meaning of all these properties please refer to Swagger UI documentation
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SwaggerOAuth2Configuration {
 
-  @Nullable private String clientId;
+    private String clientId;
 
-  @Nullable private String clientSecret;
+    private String clientSecret;
 
-  @Nullable private String realm;
+    private String realm;
 
-  @Nullable private String appName;
+    private String appName;
 
-  @Nullable private String scopeSeparator;
+    private String scopeSeparator;
 
-  private Map<String, String> additionalQueryStringParams = Maps.newHashMap();
+    private Map<String, String> additionalQueryStringParams = Maps.newHashMap();
 
-  @Nullable
-  public String getClientId() {
-    return clientId;
-  }
 
-  public void setClientId(@Nullable String clientId) {
-    this.clientId = clientId;
-  }
+    public String getClientId() {
+        return clientId;
+    }
 
-  @Nullable
-  public String getClientSecret() {
-    return clientSecret;
-  }
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
+    }
 
-  public void setClientSecret(@Nullable String clientSecret) {
-    this.clientSecret = clientSecret;
-  }
 
-  @Nullable
-  public String getRealm() {
-    return realm;
-  }
+    public String getClientSecret() {
+        return clientSecret;
+    }
 
-  public void setRealm(@Nullable String realm) {
-    this.realm = realm;
-  }
+    public void setClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
+    }
 
-  @Nullable
-  public String getAppName() {
-    return appName;
-  }
 
-  public void setAppName(@Nullable String appName) {
-    this.appName = appName;
-  }
+    public String getRealm() {
+        return realm;
+    }
 
-  @Nullable
-  public String getScopeSeparator() {
-    return scopeSeparator;
-  }
+    public void setRealm(String realm) {
+        this.realm = realm;
+    }
 
-  public void setScopeSeparator(@Nullable String scopeSeparator) {
-    this.scopeSeparator = scopeSeparator;
-  }
 
-  public Map<String, String> getAdditionalQueryStringParams() {
-    return additionalQueryStringParams;
-  }
+    public String getAppName() {
+        return appName;
+    }
 
-  public void setAdditionalQueryStringParams(Map<String, String> additionalQueryStringParams) {
-    this.additionalQueryStringParams = additionalQueryStringParams;
-  }
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+
+    public String getScopeSeparator() {
+        return scopeSeparator;
+    }
+
+    public void setScopeSeparator(String scopeSeparator) {
+        this.scopeSeparator = scopeSeparator;
+    }
+
+    public Map<String, String> getAdditionalQueryStringParams() {
+        return additionalQueryStringParams;
+    }
+
+    public void setAdditionalQueryStringParams(Map<String, String> additionalQueryStringParams) {
+        this.additionalQueryStringParams = additionalQueryStringParams;
+    }
 }
