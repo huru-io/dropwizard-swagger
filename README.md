@@ -10,8 +10,8 @@ Current version has been tested with Dropwizard 2.0.28 and Swagger 2.1.13 which 
 
 Requirements
 --------------
-* Dropwizard 2.0.28
-* Swagger API 2.1.13
+* Dropwizard 4.0.2
+* Swagger API 2.1.16
 * Swagger UI 4.6.2
 
 Usage
